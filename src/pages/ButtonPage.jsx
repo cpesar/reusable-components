@@ -1,5 +1,6 @@
 import Button from '../components/Button.jsx'
 import { GoBell, GoHomeFill, GoLaw, GoRocket, GoZap } from 'react-icons/go'
+import { AiFillLike } from "react-icons/ai";
 
 function ButtonPage() {
 
@@ -7,9 +8,14 @@ function ButtonPage() {
         console.log('button clicked')
     }
 
+    const icon = <span className="text-xl mx-3 text-gray-400 text-yellow-400"><AiFillLike /></span>
+
     return (
         <>
-            <h1>Reusable Components v2</h1>
+            <h1 className="text-2xl flex p-3 mx-80 text-yellow-400">
+                Reusable Buttons
+                {icon}
+            </h1>
             <div>
                 <Button
                     className='mb-5'
