@@ -1,12 +1,12 @@
 import React from 'react'
-import { AiFillHdd } from "react-icons/ai";
+// import { AiFillHdd } from "react-icons/ai";
 import Accordion from '../components/Accordion.jsx'
 
 
 
 const AccordionPage = () => {
 
-    const icon = <span className="text-xl mx-3 text-gray-500"><AiFillHdd /></span>
+    // const icon = <span className="text-2xl mx-3 text-gray-500"><AiFillHdd /></span>
 
     const items = [
         {
@@ -28,9 +28,9 @@ const AccordionPage = () => {
 
     return (
         <>
-            <h1 className="text-2xl flex p-3 mx-80 text-green-700">
+            <h1 className="font-medium text-2xl flex p-3 mx-80 py-10 text-green-700">
                 Reusable Accordion
-                {icon}
+                {/* {icon} */}
 
             </h1>
             <Accordion items={items} ></Accordion>

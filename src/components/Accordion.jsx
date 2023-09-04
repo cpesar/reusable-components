@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { AiOutlineCaretDown, AiOutlineCaretLeft } from "react-icons/ai";
+// import { AiOutlineCaretDown, AiOutlineCaretLeft } from "react-icons/ai";
+import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 const Accordion = ({ items }) => {
 
@@ -18,7 +19,7 @@ const Accordion = ({ items }) => {
         const isActive = index === activeIndex;
         // console.log(isActive)
 
-        const icon = <span className='text-xl'>{isActive ? <AiOutlineCaretDown /> : <AiOutlineCaretLeft />}</span>
+        const icon = <span className='text-xl'>{isActive ? <GoChevronDown /> : <GoChevronLeft />}</span>
 
         return (
             <div key={item.id}>
