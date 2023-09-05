@@ -1,24 +1,17 @@
 import Button from '../components/Button.jsx'
 import { GoBell, GoHomeFill, GoLaw, GoRocket, GoZap } from 'react-icons/go'
-// import { AiFillLike } from "react-icons/ai";
 
 function ButtonPage() {
 
     const handleClick = () => {
-        console.log('button clicked')
+        // console.log('button clicked')
     }
-
-    // const icon = <span className="text-2xl mx-3 text-gray-400 text-yellow-400"><AiFillLike /></span>
 
     return (
         <>
-            <h1 className="font-medium text-2xl flex p-3 mx-80 py-10 text-yellow-400">
-                Reusable Buttons
-                {/* {icon} */}
-            </h1>
             <div>
                 <Button
-                    className='mb-5 mx-80'
+                    className='mb-5'
                     success
                     rounded
                     outline
@@ -30,7 +23,7 @@ function ButtonPage() {
             </div>
             <div>
                 <Button
-                    className='mb-5 mx-60'
+                    className='mb-5'
                     danger
                     outline
                     onClick={handleClick}
@@ -41,7 +34,7 @@ function ButtonPage() {
             </div>
             <div>
                 <Button
-                    className='mb-5 mx-40'
+                    className='mb-5'
                     warning
                     onClick={handleClick}
                 >
@@ -51,7 +44,7 @@ function ButtonPage() {
             </div>
             <div>
                 <Button
-                    className='mb-5 mx-20'
+                    className='mb-5'
                     secondary
                     onClick={handleClick}
                 >

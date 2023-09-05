@@ -7,7 +7,6 @@ import Accordion from '../components/Accordion.jsx'
 const AccordionPage = () => {
 
     // const icon = <span className="text-2xl mx-3 text-gray-500"><AiFillHdd /></span>
-
     const items = [
         {
             id: 1,
@@ -28,13 +27,7 @@ const AccordionPage = () => {
 
     return (
         <>
-            <h1 className="font-medium text-2xl flex p-3 mx-80 py-10 text-green-700">
-                Reusable Accordion
-                {/* {icon} */}
-
-            </h1>
             <Accordion items={items} ></Accordion>
-
         </>
 
     )
