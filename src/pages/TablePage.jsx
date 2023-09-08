@@ -1,19 +1,21 @@
 import React from 'react'
-import Table from '../components/Table'
+// import Table from '../components/Table'
+import SortableTable from '../components/SortableTable'
 
 const TablePage = () => {
 
     const data = [
-        { name: 'Orioles', color: 'bg-orange-500', city: 'Baltimore' },
-        { name: 'Ravens', color: 'bg-purple-500', city: 'Baltimore' },
-        { name: 'Nationals', color: 'bg-red-500', city: 'Washington' },
-        { name: 'Wizards', color: 'bg-blue-500', city: 'Washington' },
+        { name: 'Orioles', color: 'bg-orange-500', city: 'Baltimore', score: 1 },
+        { name: 'Ravens', color: 'bg-purple-500', city: 'Baltimore', score: 73 },
+        { name: 'Nationals', color: 'bg-red-500', city: 'Washington', score: 23 },
+        { name: 'Wizards', color: 'bg-blue-500', city: 'Washington', score: 99 },
     ]
 
     const config = [
         {
             label: 'Name',
-            render: (team) => team.name
+            render: (team) => team.name,
+            sortValue: (team) => team.name
         },
         {
             label: 'Color',
@@ -21,8 +23,13 @@ const TablePage = () => {
         },
         {
             label: 'City',
-            render: (team) => team.city
-
+            render: (team) => team.city,
+            sortValue: (team) => team.city
+        },
+        {
+            label: 'Score',
+            render: (team) => team.score,
+            sortValue: (team) => team.score
         }
     ]
 
@@ -32,7 +39,7 @@ const TablePage = () => {
 
     return (
         <>
-            <Table data={data} config={config} keyFn={keyFn} />
+            <SortableTable data={data} config={config} keyFn={keyFn} />
         </>
     )
 }
