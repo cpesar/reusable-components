@@ -29,7 +29,7 @@ const App = () => {
           <TablePage />
         </Route>
         <Route path='/counter'>
-          <CounterPage initialCount={1} />
+          <CounterPage initialCount={10} />
         </Route>
       </div>
 
