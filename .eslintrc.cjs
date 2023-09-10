@@ -18,7 +18,7 @@ module.exports = {
     ],
     "no-unused-vars": "off",
     "react/prop-types": [{
-      skipUndeclared: true,
+      ignore: ["children"]
     }]
   },
 }

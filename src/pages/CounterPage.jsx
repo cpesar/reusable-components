@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react'
 import Button from '../components/Button'
+import useCounter from '../hooks/use-counter'
 
+
+// eslint-disable-next-line react/prop-types
 const CounterPage = ({ initialCount }) => {
-    const [count, setCount] = useState(initialCount)
+    const { count, increment } = useCounter(initialCount)
 
-    useEffect(() => {
-        console.log(count)
-    }, [count])
-
-    const handleClick = () => {
-        setCount(count + 1)
-    }
 
     return (
         <div>
             <h1>Count is {count}</h1>
-            <Button onClick={handleClick}>
+            <Button onClick={increment}>
                 Increment
             </Button>
         </div>

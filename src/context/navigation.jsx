@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 
 const NavigationContext = createContext()
 
+// eslint-disable-next-line react/prop-types
 const NavigationProvider = ({ children }) => {
     const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
